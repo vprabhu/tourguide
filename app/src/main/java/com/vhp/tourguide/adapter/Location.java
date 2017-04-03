@@ -12,6 +12,8 @@ public class Location {
     private String information;
     /** location images */
     private int imageResourceId;
+    /** action items */
+    private int actionFlow;
 
 
     /**
@@ -19,11 +21,13 @@ public class Location {
      * @param title title of the attraction
      * @param information information about the attraction
      * @param imageResourceId is the image resource
+     * @param actionFlow decides the action items
      */
-    public Location(String title, String information, int imageResourceId) {
+    public Location(String title, String information, int imageResourceId , int actionFlow) {
         this.title = title;
         this.information = information;
         this.imageResourceId = imageResourceId;
+        this.actionFlow = actionFlow;
     }
 
 
@@ -42,9 +46,16 @@ public class Location {
     }
 
     /**
-     * get the image for that word
+     * get the image for that location
      */
     public int getImageResourceId() {
         return imageResourceId;
+    }
+
+    /**
+     * gets the action flow of the location
+     */
+    public int getActionFlow() {
+        return actionFlow;
     }
 }

@@ -11,6 +11,7 @@ import android.widget.ListView;
 import com.vhp.tourguide.R;
 import com.vhp.tourguide.adapter.Location;
 import com.vhp.tourguide.adapter.LocationAdapter;
+import com.vhp.tourguide.utils.Constants;
 
 import java.util.ArrayList;
 
@@ -19,9 +20,6 @@ import java.util.ArrayList;
  */
 public class EduFragment extends Fragment {
 
-    private View mRootView;
-    private ListView mCommercialsListView;
-    private ArrayList<Location> mEducationList = new ArrayList<>();
 
     public EduFragment() {
         // Required empty public constructor
@@ -32,15 +30,22 @@ public class EduFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        mRootView = inflater.inflate(R.layout.fragment_commercials, container, false);
+        View mRootView = inflater.inflate(R.layout.fragment_commercials, container, false);
 
-        mCommercialsListView = (ListView) mRootView.findViewById(R.id.listview_commercials);
+        ListView mCommercialsListView = (ListView) mRootView.findViewById(R.id.listview_commercials);
 
-        mEducationList.add(new Location("Christ University" ,  "080 4012 9100" , R.mipmap.gopolan_mall));
-        mEducationList.add(new Location("IIMB" , "080 2699 3475" , R.mipmap.shopperstop));
+        ArrayList<Location> mEducationList = new ArrayList<>();
 
+        //construct the arraylist with Educational section's attractions
+        mEducationList.add(new Location(
+                "Christ University" ,  "080 4012 9100" , R.mipmap.christ_univ , Constants.ACTION_CALL));
+        mEducationList.add(new Location(
+                "IIMB" , "080 2699 3475" , R.mipmap.iimb, Constants.ACTION_CALL));
+
+        // initializes the array adapter with the arraylist
         LocationAdapter mLocationAdapter = new LocationAdapter(getActivity() , mEducationList);
 
+        // sets the adapter to listview
         mCommercialsListView.setAdapter(mLocationAdapter);
 
         return mRootView;

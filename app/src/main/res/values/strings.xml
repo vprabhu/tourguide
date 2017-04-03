@@ -4,5 +4,11 @@
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
 
-    <!-- Commercials -->
+    <!-- welcome text -->
+    <string name="info_welcome_text">Thia app tells about the attractions in an bangalore
+        (South India) area.It does not have complete info about the Whole Bangalore but the
+        attractions between JayaDev hospital and Royal Meenakshi mall.</string>
+    <string name="info_welcome_button">Welcome</string>
+
+
 </resources>

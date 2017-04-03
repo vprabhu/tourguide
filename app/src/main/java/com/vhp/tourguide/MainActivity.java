@@ -8,6 +8,7 @@ import com.vhp.tourguide.adapter.TourPagerAdapter;
 
 public class MainActivity extends AppCompatActivity {
 
+    // viewpager variable to hold the attractions in fragment
     private ViewPager mRootViewPager;
 
     @Override

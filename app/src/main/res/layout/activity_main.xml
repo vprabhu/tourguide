@@ -4,7 +4,7 @@
     android:id="@+id/viewpager_root"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:padding="5dp"
+    android:padding="@dimen/viewpager_padding"
     tools:context="com.vhp.tourguide.MainActivity">
 
     <android.support.v4.view.PagerTitleStrip
