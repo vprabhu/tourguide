@@ -38,9 +38,15 @@ public class EduFragment extends Fragment {
 
         //construct the arraylist with Educational section's attractions
         mEducationList.add(new Location(
-                "Christ University" ,  "080 4012 9100" , R.mipmap.christ_univ , Constants.ACTION_CALL));
+                getResources().getString(R.string.info_attraction_christ_name) ,
+                getResources().getString(R.string.info_attraction_christ),
+                R.drawable.christ_univ,
+                Constants.ACTION_CALL));
         mEducationList.add(new Location(
-                "IIMB" , "080 2699 3475" , R.mipmap.iimb, Constants.ACTION_CALL));
+                getResources().getString(R.string.info_attraction_iimb_name),
+                getResources().getString(R.string.info_attraction_iimb) ,
+                R.drawable.iimb,
+                Constants.ACTION_CALL));
 
         // initializes the array adapter with the arraylist
         LocationAdapter mLocationAdapter = new LocationAdapter(getActivity() , mEducationList);

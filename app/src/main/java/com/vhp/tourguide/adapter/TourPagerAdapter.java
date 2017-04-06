@@ -1,9 +1,11 @@
 package com.vhp.tourguide.adapter;
 
+import android.content.Context;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentStatePagerAdapter;
 
+import com.vhp.tourguide.R;
 import com.vhp.tourguide.fragments.CommercialsFragment;
 import com.vhp.tourguide.fragments.EduFragment;
 import com.vhp.tourguide.fragments.OthersFragment;
@@ -17,9 +19,11 @@ public class TourPagerAdapter extends FragmentStatePagerAdapter {
 
     // total number of fragments
     private final int NUM_OF_PAGES = 4;
+    private Context mContext;
 
-    public TourPagerAdapter(FragmentManager fm) {
+    public TourPagerAdapter(FragmentManager fm , Context ctxParam) {
         super(fm);
+        mContext = ctxParam;
     }
 
     @Override
@@ -47,13 +51,13 @@ public class TourPagerAdapter extends FragmentStatePagerAdapter {
     @Override
     public CharSequence getPageTitle(int position) {
         if(position == 0){
-            return "Commercials";
+            return mContext.getResources().getString(R.string.title_commercials);
         }else if(position == 1){
-            return "Wine & Dine";
+            return mContext.getResources().getString(R.string.title_dine);
         }else if(position == 2){
-            return "Educational";
+            return mContext.getResources().getString(R.string.title_educational);
         }else if(position == 3){
-            return "Others";
+            return mContext.getResources().getString(R.string.title_others);
         }
         return super.getPageTitle(position);
     }

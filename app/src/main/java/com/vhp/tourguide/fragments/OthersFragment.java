@@ -37,15 +37,29 @@ public class OthersFragment extends Fragment {
 
         //construct the arraylist with others section's attractions
         mLocationArrayList.add(new Location(
-                "Apollo Hospital" , "080 2630 4050" , R.mipmap.apollo, Constants.ACTION_CALL));
+                getResources().getString(R.string.info_attraction_apollo_name) ,
+                getResources().getString(R.string.info_attraction_apollo) ,
+                R.drawable.apollo,
+                Constants.ACTION_CALL));
         mLocationArrayList.add(new Location(
-                "Fortis Hospital" , "080662 14444" , R.mipmap.fortis , Constants.ACTION_CALL));
+                getResources().getString(R.string.info_attraction_fortis_name),
+                getResources().getString(R.string.info_attraction_fortis) ,
+                R.drawable.fortis, Constants.ACTION_CALL));
         mLocationArrayList.add(new Location(
-                "Sri Chowdeshwari Devi Temple " , "4.7" , R.mipmap.chowdeshwari , Constants.ACTION_RATINGS));
+                getResources().getString(R.string.info_attraction_chowdeshwari_name),
+                getResources().getString(R.string.info_attraction_chowdeshwari),
+                R.drawable.chowdeshwari ,
+                Constants.ACTION_RATINGS));
         mLocationArrayList.add(new Location(
-                "Meenakshi Sundareshwara Temple" , "4.8" , R.mipmap.meenakshi , Constants.ACTION_RATINGS));
+                getResources().getString(R.string.info_attraction_meenashki_temple_name),
+                getResources().getString(R.string.info_attraction_meenashki_temple) ,
+                R.drawable.meenakshi ,
+                Constants.ACTION_RATINGS));
         mLocationArrayList.add(new Location(
-                "Reliance digital" , "Hours :10am - 10pm" , R.mipmap.reliance_digital, Constants.ACTION_TIMINGS));
+                getResources().getString(R.string.info_attraction_reliance_anme),
+                getResources().getString(R.string.info_attraction_reliance),
+                R.drawable.reliance_digital,
+                Constants.ACTION_TIMINGS));
 
         // initializes the array adapter with the arraylist
         LocationAdapter mLocationAdapter = new LocationAdapter(getActivity() , mLocationArrayList);

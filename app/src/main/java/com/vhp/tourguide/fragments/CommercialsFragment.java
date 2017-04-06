@@ -37,13 +37,25 @@ public class CommercialsFragment extends Fragment {
 
         //construct the arraylist with commercial section's attractions
         mLocationArrayList.add(new Location(
-                "Gopalan Innovation Mall" , "Hours :10am - 10pm" , R.mipmap.gopolan_mall , Constants.ACTION_TIMINGS));
+                getResources().getString(R.string.info_attraction_gopalan_mall_name),
+                getResources().getString(R.string.info_attraction_gopalan_mall) ,
+                R.drawable.gopalan_mall ,
+                Constants.ACTION_TIMINGS));
         mLocationArrayList.add(new Location(
-                "Shoppers Stop" , "Hours :11am - 9pm" , R.mipmap.shopperstop , Constants.ACTION_TIMINGS));
+                getResources().getString(R.string.info_attraction_shoppersstop_name) ,
+                getResources().getString(R.string.info_attraction_shoppersstop) ,
+                R.drawable.shopperstop ,
+                Constants.ACTION_TIMINGS));
         mLocationArrayList.add(new Location(
-                "BrandFactory" , "Hours :11am - 9.30pm" , R.mipmap.brandfactory , Constants.ACTION_TIMINGS));
+                getResources().getString(R.string.info_attraction_brand_factory_name),
+                getResources().getString(R.string.info_attraction_brand_factory) ,
+                R.drawable.brandfactory ,
+                Constants.ACTION_TIMINGS));
         mLocationArrayList.add(new Location(
-                "Royal Meenakshi Mall" , "Hours :10am - 11pm" , R.mipmap.royal_meenakshi_mall , Constants.ACTION_TIMINGS));
+                getResources().getString(R.string.info_attraction_meenakshi_mall_name),
+                getResources().getString(R.string.info_attraction_meenakshi_mall),
+                R.drawable.royal_meenakshi_mall ,
+                Constants.ACTION_TIMINGS));
 
         // initializes the array adapter with the arraylist
         LocationAdapter mLocationAdapter = new LocationAdapter(getActivity() , mLocationArrayList);

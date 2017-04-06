@@ -33,28 +33,28 @@ public class LocationAdapter extends ArrayAdapter<Location> {
     @NonNull
     @Override
     public View getView(int position, View convertView, ViewGroup parent) {
+        ViewHolder holder = null;
 
-        View listItemView = convertView;
-        if(listItemView==null) {
-            listItemView = LayoutInflater.from(
+        if(convertView==null) {
+            convertView = LayoutInflater.from(
                     getContext()).inflate(R.layout.list_item, parent, false);
+            holder = new ViewHolder();
+            holder.mTitleTextView = (TextView)convertView.findViewById(R.id.textView_timings_title);
+            holder.mImageView = (ImageView)convertView.findViewById(R.id.image);
+        }else {
+
         }
         final Location currentAttraction = getItem(position);
-
-        TextView mTitleTextView = (TextView)listItemView.findViewById(R.id.textView_timings_title);
-        final TextView mCallTextView;
-        TextView mTimingsTextView;
-        RatingBar mRatingBar;
 
         /**
          * switch statement to decide the action items for the respective attractions
          */
         switch (currentAttraction.getActionFlow()){
             case Constants.ACTION_CALL:
-                mCallTextView = (TextView)listItemView.findViewById(R.id.textView_item_call);
-                mCallTextView.setVisibility(View.VISIBLE);
-                mCallTextView.setText(currentAttraction.getInformation());
-                mCallTextView.setOnClickListener(new View.OnClickListener() {
+                holder.mCallTextView = (TextView)convertView.findViewById(R.id.textView_item_call);
+                holder.mCallTextView.setVisibility(View.VISIBLE);
+                holder.mCallTextView.setText(currentAttraction.getInformation());
+                holder.mCallTextView.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View view) {
                         Uri call = Uri.parse("tel:" + currentAttraction.getInformation());
@@ -64,30 +64,37 @@ public class LocationAdapter extends ArrayAdapter<Location> {
                 });
                 break;
             case Constants.ACTION_RATINGS:
-                mRatingBar = (RatingBar)listItemView.findViewById(R.id.ratingBar_item);
-                mRatingBar.setVisibility(View.VISIBLE);
+                holder.mRatingBar = (RatingBar)convertView.findViewById(R.id.ratingBar_item);
+                holder.mRatingBar.setVisibility(View.VISIBLE);
                 float ratingsFloat = Float.parseFloat(currentAttraction.getInformation());
-                mRatingBar.setRating(ratingsFloat);
+                holder.mRatingBar.setRating(ratingsFloat);
                 break;
             case Constants.ACTION_TIMINGS:
-                mTimingsTextView = (TextView)listItemView.findViewById(R.id.textView_timings_hours);
-                mTimingsTextView.setVisibility(View.VISIBLE);
-                mTimingsTextView.setText(currentAttraction.getInformation());
+                holder.mTimingsTextView = (TextView)convertView.findViewById(R.id.textView_timings_hours);
+                holder.mTimingsTextView.setVisibility(View.VISIBLE);
+                holder.mTimingsTextView.setText(currentAttraction.getInformation());
                 break;
         }
 
-        ImageView mImageView = (ImageView)listItemView.findViewById(R.id.image);
         /* sets the attraction name to title textview*/
-        mTitleTextView.setText(currentAttraction.getTitle());
+        holder.mTitleTextView.setText(currentAttraction.getTitle());
         /* set the image in the imageview */
-        mImageView.setImageResource(currentAttraction.getImageResourceId());
+        holder.mImageView.setImageResource(currentAttraction.getImageResourceId());
 
-        return listItemView;
+        return convertView;
     }
 
 
     @Override
     public int getPosition(Location item) {
         return super.getPosition(item);
+    }
+
+    static class ViewHolder {
+        private TextView mTitleTextView;
+        private TextView mCallTextView;
+        private TextView mTimingsTextView;
+        private ImageView mImageView;
+        private RatingBar mRatingBar;
     }
 }

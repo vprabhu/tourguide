@@ -10,5 +10,44 @@
         attractions between JayaDev hospital and Royal Meenakshi mall.</string>
     <string name="info_welcome_button">Welcome</string>
 
+    <!-- Attractions Name-->
+    <string name="info_attraction_gopalan_mall_name">Gopalan Innovation Mall</string>
+    <string name="info_attraction_shoppersstop_name">Shoppers Stop</string>
+    <string name="info_attraction_brand_factory_name">BrandFactory</string>
+    <string name="info_attraction_meenakshi_mall_name">Royal Meenakshi Mall</string>
+    <string name="info_attraction_mcdonalds_name">McDonalds</string>
+    <string name="info_attraction_madhulokha_name">Madhuloka Liquor Boutique </string>
+    <string name="info_attraction_pizza_hut_name">Pizza Hut</string>
+    <string name="info_attraction_dominos_name">Dominos Pizza</string>
+    <string name="info_attraction_christ_name">Christ University</string>
+    <string name="info_attraction_iimb_name">IIMB</string>
+    <string name="info_attraction_apollo_name">Apollo Hospital</string>
+    <string name="info_attraction_fortis_name">Fortis Hospital</string>
+    <string name="info_attraction_chowdeshwari_name">Sri Chowdeshwari Devi Temple </string>
+    <string name="info_attraction_meenashki_temple_name">Meenakshi Sundareshwara Temple</string>
+    <string name="info_attraction_reliance_anme">Reliance digital</string>
+
+    <!-- Attractions Info-->
+    <string name="info_attraction_gopalan_mall">Hours :10am - 10pm</string>
+    <string name="info_attraction_shoppersstop">Hours :11am - 9pm</string>
+    <string name="info_attraction_brand_factory">Hours :11am - 9.30pm</string>
+    <string name="info_attraction_meenakshi_mall">Hours :10am - 11pm</string>
+    <string name="info_attraction_mcdonalds">Hours :10am - 11pm</string>
+    <string name="info_attraction_madhulokha">Hours :10am - 11pm</string>
+    <string name="info_attraction_pizza_hut">Hours :10am - 11pm</string>
+    <string name="info_attraction_dominos">Hours :10am - 11pm</string>
+    <string name="info_attraction_iimb">080 2699 3475</string>
+    <string name="info_attraction_christ">080 4012 9100</string>
+    <string name="info_attraction_apollo">080 2630 4050</string>
+    <string name="info_attraction_fortis">080662 14444</string>
+    <string name="info_attraction_chowdeshwari">4.7</string>
+    <string name="info_attraction_meenashki_temple">4.8</string>
+    <string name="info_attraction_reliance">Hours :10am - 10pm</string>
+
+    <!-- viewpager items-->
+    <string name="title_commercials">Commercials</string>
+    <string name="title_dine">Wine-Dine</string>
+    <string name="title_educational">Educational</string>
+    <string name="title_others">Others</string>
 
 </resources>

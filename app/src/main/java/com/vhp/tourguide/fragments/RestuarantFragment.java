@@ -38,27 +38,27 @@ public class RestuarantFragment extends Fragment {
         //construct the arraylist with Restuarant section's attractions
         mLocationArrayList.add(
                 new Location(
-                        "McDonalds" ,
-                        "Hours :11am - 11pm" ,
-                        R.mipmap.mcdonalds ,
+                        getResources().getString(R.string.info_attraction_mcdonalds_name),
+                        getResources().getString(R.string.info_attraction_mcdonalds) ,
+                        R.drawable.mcdonalds ,
                         Constants.ACTION_TIMINGS));
         mLocationArrayList.add(
                 new Location(
-                        "Madhuloka Liquor Boutique " ,
-                        "Hours :10am - 10.30pm" ,
-                        R.mipmap.madhu,
+                        getResources().getString(R.string.info_attraction_madhulokha_name),
+                        getResources().getString(R.string.info_attraction_madhulokha) ,
+                        R.drawable.madhu,
                         Constants.ACTION_TIMINGS));
         mLocationArrayList.add(
                 new Location(
-                        "Pizza Hut" ,
-                        "Hours :11am - 11pm" ,
-                        R.mipmap.pizza_hut,
+                        getResources().getString(R.string.info_attraction_pizza_hut_name),
+                        getResources().getString(R.string.info_attraction_pizza_hut),
+                        R.drawable.pizza_hut,
                         Constants.ACTION_TIMINGS));
         mLocationArrayList.add(
                 new Location(
-                        "Dominos Pizza" ,
-                        "Hours :11am - 11pm" ,
-                        R.mipmap.dominos_pizza,
+                        getResources().getString(R.string.info_attraction_dominos_name),
+                        getResources().getString(R.string.info_attraction_dominos),
+                        R.drawable.dominos_pizza,
                         Constants.ACTION_TIMINGS));
 
         // initializes the array adapter with the arraylist

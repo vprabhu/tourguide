@@ -20,7 +20,7 @@ public class MainActivity extends AppCompatActivity {
         mRootViewPager = (ViewPager) findViewById(R.id.viewpager_root);
 
         // adapter to set the fragments for different relevant attraction
-        TourPagerAdapter mTourPagerAdapter = new TourPagerAdapter(getSupportFragmentManager());
+        TourPagerAdapter mTourPagerAdapter = new TourPagerAdapter(getSupportFragmentManager() , MainActivity.this);
 
 
         // set the adapter to view pager
